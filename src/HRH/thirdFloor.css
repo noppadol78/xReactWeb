@@ -1,0 +1,100 @@
+.Box {
+  background: #3a397b;
+  background-image: linear-gradient(45deg, #3a397b 0, #0c69b0 100%);
+  color: #fff;
+  padding: 10px 0;
+  padding-left: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.Wrap {
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+.building {
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'EMprint-Regular';
+}
+
+.room-box-available {
+  background: #eee;
+  border-left: 18px solid rgb(65, 163, 8);
+  border-radius: 10px;
+  height: 80px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.room-box-occupied {
+  background: #eee;
+  border-left: 18px solid rgb(204, 28, 28);
+  border-radius: 10px;
+  height: 80px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.room-card {
+  margin: 10px;
+}
+
+.row {
+  width: 100vh;
+}
+
+.room-info {
+  padding: 0.5px;
+}
+
+.room {
+  width: 30vw;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.room-status-available {
+  font-weight: 100;
+  font-size: 15px;
+  color: rgb(65, 163, 8);
+  font-family: 'EMprint-Regular';
+}
+
+.room-status-occupied {
+  font-weight: 100;
+  font-size: 15px;
+  color: rgb(204, 28, 28);
+  font-family: 'EMprint-Regular';
+}
+
+.room-name {
+  font-size: 10px;
+  font-size: medium;
+  font-family: 'EMprint-Regular';
+}
+
+.floor-plan {
+  width: 70vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .room-box-available {
+    height: 60px;
+    width: 80px;
+    border-left: 10px solid rgb(65, 163, 8);
+  }
+
+  .room-box-occupied {
+    border-left: 10px solid rgb(204, 28, 28);
+    height: 60px;
+    width: 80px;
+  }
+}
