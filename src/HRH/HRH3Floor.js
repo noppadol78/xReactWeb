@@ -1,6 +1,5 @@
 import './thirdFloor.css';
-import React, {Component} from "react";
-
+import React, {Component} from 'react';
 import axios from 'axios';
 import Tippy from '@tippy.js/react';
 import 'tippy.js/dist/tippy.css';
@@ -16,9 +15,6 @@ class thirdFloor extends Component {
   }
 
   componentDidMount() {
-	
-	console.log('componentDidMount');
-	  
     this.fetchData();
     this.interval = setInterval(() => {
       this.fetchData();
