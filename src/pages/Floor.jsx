@@ -4,7 +4,9 @@ import { InteractionRequiredAuthError, InteractionType } from "@azure/msal-brows
 import { loginRequest, protectedResources } from "../authConfig";
 import { callApiWithToken } from "../fetch";
 
-import ThirdFloor from '../HRH/HRH3Floor';
+import ThirdFloor    from '../HRH/HRH3Floor';
+import EleventhFloor from '../HRH/HRH11Floor';
+import TwelvethFloor from '../HRH/HRH12Floor';
 
 import { HelloData } from "../components/DataDisplay";
 
@@ -19,6 +21,8 @@ const FloorContent = () => {
     const { instance, accounts, inProgress } = useMsal();
     const account = useAccount(accounts[0] || {});
     const [helloData, setHelloData] = useState(null);
+    const params = new URLSearchParams(window.location.search);
+    const floorParam = params.get("floor");
 
     useEffect(() => {
         if (account && inProgress === "none" && !helloData) {
@@ -43,10 +47,19 @@ const FloorContent = () => {
             });
         }
     }, [account, inProgress, instance]);
-  
+
+    function getFloorTag() {
+      switch(floorParam){
+        case "3": return <ThirdFloor/>; 
+        case "11": return <EleventhFloor/>;
+        case "12": return <TwelvethFloor/>;
+        default: return null;
+      }
+    }
+
     return (
         <>
-            { helloData ? <ThirdFloor /> : null }
+            { helloData ? getFloorTag() : null }
         </>
     );
 };
@@ -58,7 +71,7 @@ const FloorContent = () => {
  * to be passed to the login API, a component to display while authentication is in progress or a component to display if an error occurs. For more, visit:
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/getting-started.md
  */
-export const HRH03 = () => {
+export const FLOOR = () => {
     const authRequest = {
         ...loginRequest
     };

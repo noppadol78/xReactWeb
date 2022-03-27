@@ -24,11 +24,11 @@ export const NavigationBar = () => {
     return (
         <>
             <Navbar bg="primary" variant="dark">
-                <a className="navbar-brand" href="/">Microsoft identity platform</a>
+                <a className="navbar-brand" href="/">Smart Office</a>
                 <AuthenticatedTemplate>
-                    <Nav.Link as={Button} href="/hello">HelloAPI</Nav.Link>
-					<Nav.Link as={Button} href="/hrh/03">HRH 3</Nav.Link>
-                    <Nav.Link as={Button} href="/buildings/hrh/11thfloor">HRH 11</Nav.Link>
+					<Nav.Link as={Button} href="/hrh?floor=3">HRH 3</Nav.Link>
+                    <Nav.Link as={Button} href="/hrh?floor=11">HRH 11</Nav.Link>
+                    <Nav.Link as={Button} href="/hrh?floor=12">HRH 12</Nav.Link>
                     
                     <div className="ml-auto">
                         <Button variant="info" onClick={() => instance.loginPopup(b2cPolicies.authorities.editProfile)} className="ml-auto">Edit Profile</Button>

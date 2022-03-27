@@ -49,16 +49,9 @@ class ThirdFloor extends Component {
           <div className="Wrap">
             <table>
               <tbody>
-                <tr className="row">
+                <tr>
                   {/* TODO: Split SVG to be separate file instead of hardcoding */}
-                  <td className="floor-plan">
-                    <svg
-                      width="100%"
-                      height="650"
-                      viewBox="0 0 666 729"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                  <td className="Svg"> <svg width="550" height="650" viewBox="0 0 666 729" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect
                         x="2"
                         y="2"
