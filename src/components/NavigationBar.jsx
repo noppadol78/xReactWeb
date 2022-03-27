@@ -27,7 +27,9 @@ export const NavigationBar = () => {
                 <a className="navbar-brand" href="/">Microsoft identity platform</a>
                 <AuthenticatedTemplate>
                     <Nav.Link as={Button} href="/hello">HelloAPI</Nav.Link>
-					<Nav.Link as={Button} href="/buildings/hrh/3rdfloor">HRH 3</Nav.Link>
+					<Nav.Link as={Button} href="/hrh/03">HRH 3</Nav.Link>
+                    <Nav.Link as={Button} href="/buildings/hrh/11thfloor">HRH 11</Nav.Link>
+                    
                     <div className="ml-auto">
                         <Button variant="info" onClick={() => instance.loginPopup(b2cPolicies.authorities.editProfile)} className="ml-auto">Edit Profile</Button>
                         <DropdownButton variant="warning" className="ml-auto" drop="left" title="Sign Out">

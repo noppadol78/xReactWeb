@@ -5,11 +5,13 @@ import { MsalProvider } from "@azure/msal-react";
 import { b2cPolicies } from "./authConfig";
 import { PageLayout } from "./components/PageLayout";
 import { Hello } from "./pages/Hello";
+import { HRH03 } from "./pages/HRH03";
 
 import "./styles/App.css";
 
 import React, { Component } from 'react';
-import thirdFloor from './HRH/HRH3Floor';
+import ThirdFloor from './HRH/HRH3Floor';
+import EleventhFloor from './HRH/HRH11Floor';
 
 const Pages = () => {
 
@@ -18,7 +20,10 @@ const Pages = () => {
       <Route path="/hello">
         <Hello />
       </Route>
-	  <Route path='/buildings/hrh/3rdfloor' exact component={thirdFloor} />
+	    <Route path='/buildings/hrh/11thfloor' exact component={EleventhFloor} />
+      <Route path='/hrh/03'>
+        <HRH03 />
+      </Route> 
     </Switch>
   )
 }

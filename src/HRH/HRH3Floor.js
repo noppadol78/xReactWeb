@@ -5,7 +5,7 @@ import Tippy from '@tippy.js/react';
 import 'tippy.js/dist/tippy.css';
 require('es6-promise').polyfill();
 
-class thirdFloor extends Component {
+class ThirdFloor extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -66,7 +66,7 @@ class thirdFloor extends Component {
                         height="725"
                         fill="#EEF4FA"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="495"
@@ -75,7 +75,7 @@ class thirdFloor extends Component {
                         height="121"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="160"
@@ -84,7 +84,7 @@ class thirdFloor extends Component {
                         height="262"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="260"
@@ -93,7 +93,7 @@ class thirdFloor extends Component {
                         height="104"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="2"
@@ -102,7 +102,7 @@ class thirdFloor extends Component {
                         height="149"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="257"
@@ -111,7 +111,7 @@ class thirdFloor extends Component {
                         height="129"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="2"
@@ -120,7 +120,7 @@ class thirdFloor extends Component {
                         height="53"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="356"
@@ -129,7 +129,7 @@ class thirdFloor extends Component {
                         height="50"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="405"
@@ -138,7 +138,7 @@ class thirdFloor extends Component {
                         height="79"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="341"
@@ -147,7 +147,7 @@ class thirdFloor extends Component {
                         height="104"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="117"
@@ -156,7 +156,7 @@ class thirdFloor extends Component {
                         height="277"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="322"
@@ -165,7 +165,7 @@ class thirdFloor extends Component {
                         height="185"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="436"
@@ -174,7 +174,7 @@ class thirdFloor extends Component {
                         height="185"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="322"
@@ -183,7 +183,7 @@ class thirdFloor extends Component {
                         height="61"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="521"
@@ -192,7 +192,7 @@ class thirdFloor extends Component {
                         height="59"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                       <rect
                         x="521"
@@ -201,187 +201,71 @@ class thirdFloor extends Component {
                         height="59"
                         fill="#CBE0F4"
                         stroke="black"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
-
-                      {/* TODO: Create a function and call it instead of hard-coding */}
-                      {/* TODO: Add ID and class to SVG instead of hard-coding the colors */}
-                      {/* If the lastOnline time is more than 5 minutes, then it will appear as available or green */}
-                      {/* Ad-hoc fix for daylight saving time. If lastOnline does not reach 30 minutes yet*/}
-                      {new Date() -
-                        new Date(rooms[0].lastOnline) +
-                        (new Date() - new Date(rooms[0].lastOnline) < -1800000
-                          ? 3600000
-                          : 0) >
-                      300000 ? (
-                        <Tippy content="HD30001">
-                          <rect
-                            x="287"
-                            y="122"
-                            width="40"
-                            fill="#559F3B"
-                            height="41"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </Tippy>
-                      ) : (
-                        <Tippy content="HD30001">
-                          <rect
-                            x="287"
-                            y="122"
-                            fill="#DD0F0F"
-                            width="40"
-                            height="41"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </Tippy>
-                      )}
-                      {new Date() -
-                        new Date(rooms[1].lastOnline) +
-                        (new Date() - new Date(rooms[1].lastOnline) < -1800000
-                          ? 3600000
-                          : 0) >
-                      300000 ? (
-                        <Tippy content="HD30002">
-                          <path
-                            d="M370 344H410V384H370V344Z"
-                            fill="#559F3B"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </Tippy>
-                      ) : (
-                        <Tippy content="HD30002">
-                          <path
-                            d="M370 344H410V384H370V344Z"
-                            fill="#DD0F0F"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </Tippy>
-                      )}
-                      {new Date() -
-                        new Date(rooms[2].lastOnline) +
-                        (new Date() - new Date(rooms[2].lastOnline) < -1800000
-                          ? 3600000
-                          : 0) >
-                      300000 ? (
-                        <Tippy content="HD30003">
-                          <rect
-                            x="410"
-                            y="344"
-                            width="40"
-                            fill="#559F3B"
-                            height="40"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </Tippy>
-                      ) : (
-                        <Tippy content="HD30003">
-                          <rect
-                            x="410"
-                            y="344"
-                            width="40"
-                            fill="#DD0F0F"
-                            height="40"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </Tippy>
-                      )}
-                      {new Date() -
-                        new Date(rooms[3].lastOnline) +
-                        (new Date() - new Date(rooms[3].lastOnline) < -1800000
-                          ? 3600000
-                          : 0) >
-                      300000 ? (
-                        <Tippy content="HD30004">
-                          <rect
-                            x="551"
-                            y="286"
-                            width="40"
-                            fill="#559F3B"
-                            height="40"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </Tippy>
-                      ) : (
-                        <Tippy content="HD30004">
-                          <rect
-                            x="551"
-                            y="286"
-                            fill="#DD0F0F"
-                            width="40"
-                            height="40"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </Tippy>
-                      )}
-                      {new Date() -
-                        new Date(rooms[4].lastOnline) +
-                        (new Date() - new Date(rooms[4].lastOnline) < -1800000
-                          ? 3600000
-                          : 0) >
-                      300000 ? (
-                        <Tippy content="HD30005">
-                          <rect
-                            x="551"
-                            y="244"
-                            width="40"
-                            fill="#559F3B"
-                            height="43"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </Tippy>
-                      ) : (
-                        <Tippy content="HD30005">
-                          <rect
-                            x="551"
-                            y="244"
-                            fill="#DD0F0F"
-                            width="40"
-                            height="43"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </Tippy>
-                      )}
-                      {new Date() -
-                        new Date(rooms[5].lastOnline) +
-                        (new Date() - new Date(rooms[5].lastOnline) < -1800000
-                          ? 3600000
-                          : 0) >
-                      300000 ? (
-                        <Tippy content="HD30006">
-                          <rect
-                            x="551"
-                            y="206"
-                            width="40"
-                            fill="#559F3B"
-                            height="40"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </Tippy>
-                      ) : (
-                        <Tippy content="HD30006">
-                          <rect
-                            x="551"
-                            y="206"
-                            fill="#DD0F0F"
-                            width="40"
-                            height="40"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </Tippy>
-                      )}
+                      <Tippy content="HD30001">
+                        <rect key="HD30001"
+                          x="287"
+                          y="122"
+                          width="40"
+                          fill={new Date() - new Date(rooms[0].lastOnline) > 300000 ? ("#559F3B") : ("#DD0F0F")}
+                          height="41"
+                          stroke="black"
+                          strokeWidth="4"
+                        />
+                      </Tippy>
+                      <Tippy content="HD30002">
+                        <path key="HD30002"
+                          d="M370 344H410V384H370V344Z"
+                          fill={new Date() - new Date(rooms[1].lastOnline) > 300000 ? ("#559F3B") : ("#DD0F0F")}
+                          stroke="black"
+                          strokeWidth="4"
+                        />
+                      </Tippy>
+                      <Tippy content="HD30003">
+                        <rect key="HD30003"
+                          x="410"
+                          y="344"
+                          width="40"
+                          fill={new Date() - new Date(rooms[2].lastOnline) > 300000 ? ("#559F3B") : ("#DD0F0F")}
+                          height="40"
+                          stroke="black"
+                          strokeWidth="4"
+                        />
+                      </Tippy>
+                      <Tippy content="HD30004">
+                        <rect key="HD30004"
+                          x="551"
+                          y="286"
+                          width="40"
+                          fill={new Date() - new Date(rooms[3].lastOnline) > 300000 ? ("#559F3B") : ("#DD0F0F")}
+                          height="40"
+                          stroke="black"
+                          strokeWidth="4"
+                        />
+                      </Tippy>
+                      <Tippy content="HD30005">
+                        <rect key="HD30005"
+                          x="551"
+                          y="244"
+                          width="40"
+                          fill={new Date() - new Date(rooms[4].lastOnline) > 300000 ? ("#559F3B") : ("#DD0F0F")}
+                          height="43"
+                          stroke="black"
+                          strokeWidth="4"
+                        />
+                      </Tippy>
+                      <Tippy content="HD30006">
+                        <rect key="HD30006"
+                          x="551"
+                          y="206"
+                          width="40"
+                          fill={new Date() - new Date(rooms[5].lastOnline) > 300000 ? ("#559F3B") : ("#DD0F0F")}
+                          height="40"
+                          stroke="black"
+                          strokeWidth="4"
+                        />
+                      </Tippy>
 
                       <path
                         d="M122.664 412.786V416.98H127.236V418.33H122.664V422.65H127.776V424H121.026V411.436H127.776V412.786H122.664ZM135.06 413.956C136.26 413.956 137.232 414.322 137.976 415.054C138.72 415.774 139.092 416.818 139.092 418.186V424H137.472V418.42C137.472 417.436 137.226 416.686 136.734 416.17C136.242 415.642 135.57 415.378 134.718 415.378C133.854 415.378 133.164 415.648 132.648 416.188C132.144 416.728 131.892 417.514 131.892 418.546V424H130.254V414.136H131.892V415.54C132.216 415.036 132.654 414.646 133.206 414.37C133.77 414.094 134.388 413.956 135.06 413.956ZM143.766 415.486V421.3C143.766 421.78 143.868 422.122 144.072 422.326C144.276 422.518 144.63 422.614 145.134 422.614H146.34V424H144.864C143.952 424 143.268 423.79 142.812 423.37C142.356 422.95 142.128 422.26 142.128 421.3V415.486H140.85V414.136H142.128V411.652H143.766V414.136H146.34V415.486H143.766ZM149.962 415.738C150.25 415.174 150.658 414.736 151.186 414.424C151.726 414.112 152.38 413.956 153.148 413.956V415.648H152.716C150.88 415.648 149.962 416.644 149.962 418.636V424H148.324V414.136H149.962V415.738ZM163.535 414.136L157.595 428.644H155.903L157.847 423.892L153.869 414.136H155.687L158.783 422.128L161.843 414.136H163.535ZM169.279 412.48V410.986H172.663V424H171.007V412.48H169.279Z"
@@ -409,12 +293,7 @@ class thirdFloor extends Component {
                   <td className="room">
                     {rooms.map((room) => (
                       <div className="room-card">
-                        {new Date() -
-                          new Date(room.lastOnline) +
-                          (new Date() - new Date(room.lastOnline) < -1800000
-                            ? 3600000
-                            : 0) >
-                        300000 ? (
+                        {new Date() - new Date(room.lastOnline) > 300000 ? (
                           // Daylight saving time calculation
                           <div className="room-box-available" key={room.id}>
                             <div className="room-name">{room.room}</div>
@@ -441,4 +320,4 @@ class thirdFloor extends Component {
   }
 }
 
-export default thirdFloor;
+export default ThirdFloor;
